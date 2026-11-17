@@ -1,0 +1,59 @@
+<!--meta
+{
+  "path": "/contact",
+  "title": "Book a Strategy Call | Northbound",
+  "description": "Book a 30-minute strategy call with Northbound to review your current presence and the narrative opportunity in your category."
+}
+-->
+<section class="section contact" style="padding-top:56px">
+  <div class="contact-grid">
+    <div class="contact-copy reveal">
+      <p class="eyebrow">Contact</p>
+      <h1 class="hero-title">Let’s talk about the authority you <span class="accent">should already have.</span></h1>
+      <p class="subtitle">Book a 30-minute strategy call. We will:</p>
+      <ul class="bullets"><li><svg class="star" aria-hidden="true"><use href="#star"/></svg><span>review your LinkedIn profile and website;</span></li><li><svg class="star" aria-hidden="true"><use href="#star"/></svg><span>show you the narrative opportunity we see in your category;</span></li><li><svg class="star" aria-hidden="true"><use href="#star"/></svg><span>outline what your first 90 days could look like;</span></li><li><svg class="star" aria-hidden="true"><use href="#star"/></svg><span>give you honest feedback on whether we are the right fit.</span></li></ul>
+      <p class="subtitle">There is no obligation and no hard sell.</p>
+      <div class="next-steps">
+        <h2>What happens next</h2>
+        <ol>
+          <li><span>You pick a time that suits you and answer a few quick questions about your business.</span></li>
+          <li><span>We review your presence before the call, so the time is spent on your situation.</span></li>
+          <li><span>We talk for 30 minutes and, if it’s a fit, send a written proposal within two business days.</span></li>
+        </ol>
+      </div>
+    </div>
+    <div class="reveal" style="--d:.08s">
+      <!--native-->
+      <div class="card form-card sched" id="book" data-action="{{form_action}}">
+        <div class="sched-step" data-step="1">
+          <h2 class="sched-h">Pick a time</h2>
+          <p class="sched-sub">30-minute strategy call · <span data-tz>your local time</span></p>
+          <div class="cal-head"><button type="button" class="cal-nav" data-prev aria-label="Previous month">‹</button><strong data-month></strong><button type="button" class="cal-nav" data-next aria-label="Next month">›</button></div>
+          <div class="cal-grid cal-dow" aria-hidden="true"><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span><span>Su</span></div>
+          <div class="cal-grid" data-days role="grid"></div>
+          <div class="slots" data-slots hidden><p class="sched-sub" data-slotlabel></p><div class="slot-list" data-slotlist></div></div>
+        </div>
+        <form class="sched-step" data-step="2" hidden novalidate>
+          <button type="button" class="back" data-back>‹ Change time</button>
+          <h2 class="sched-h">Your details</h2>
+          <p class="sched-sub sched-chosen" data-chosen></p>
+          <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
+          <div class="field"><label for="email">Work email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+          <div class="field"><label for="company">Company and role</label><input id="company" name="company" type="text" autocomplete="organization-title" required></div>
+          <div class="field"><label for="url">Website or LinkedIn URL</label><input id="url" name="url" type="url" inputmode="url" placeholder="https://" required></div>
+          <div class="field"><label for="about">What does your company do?</label><textarea id="about" name="about" required></textarea></div>
+          <div class="field"><label for="challenge">What is your biggest challenge with founder-led content right now?</label><textarea id="challenge" name="challenge" required></textarea></div>
+          <div class="field"><label for="known">What would you like your business to be known for? <span class="opt">(optional)</span></label><textarea id="known" name="known"></textarea></div>
+          <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <input type="hidden" name="slot"><input type="hidden" name="timezone">
+          <button class="btn btn-primary" type="submit" style="width:100%">Book a strategy call</button>
+          <p class="form-status" role="status" aria-live="polite" hidden></p>
+          <p class="form-note">We use your details only to respond to your request.{{privacy_link}}</p>
+        </form>
+        <div class="sched-step sched-done" data-step="3" hidden><h2 class="sched-h">You’re booked in.</h2><p class="sched-sub" data-confirm></p><p class="form-note">We will review your presence before the call so the time is spent on your situation.</p></div>
+      </div>
+      <!--/native-->
+      {{cal_block}}
+    </div>
+  </div>
+</section>
