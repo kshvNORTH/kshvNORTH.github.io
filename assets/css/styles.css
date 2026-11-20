@@ -332,6 +332,8 @@ a { color: inherit; }
 .team .role { font-family: var(--font-mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--blue); margin: 0 0 14px; }
 .team h3 { font-size: 28px; margin-bottom: 6px; }
 .team p { font-size: 16px; }
+.team p:not(.role) { margin: 0 0 1em; }
+.team p:not(.role):last-child { margin-bottom: 0; }
 
 /* insights */
 .feature { display: grid; gap: 24px; padding: clamp(28px, 4vw, 48px); }
