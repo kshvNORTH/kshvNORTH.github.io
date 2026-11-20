@@ -2,8 +2,9 @@
 // Usage: node build.mjs        (SITE_URL=https://yourdomain.com node build.mjs for production)
 import { readFileSync, writeFileSync, mkdirSync, readdirSync, cpSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const ROOT = new URL('.', import.meta.url).pathname;
+const ROOT = fileURLToPath(new URL('.', import.meta.url));
 const SRC = join(ROOT, 'src');
 const DIST = join(ROOT, 'dist');
 // [your site URL] placeholder: set SITE_URL at build time once the domain is known.
